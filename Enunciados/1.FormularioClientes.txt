@@ -1,0 +1,25 @@
+Campos del formulario:
+Debe incluir los siguientes campos con sus respectivas etiquetas (<label>) y restricciones:
+•	Nombre:
+o	Tipo de entrada: text
+o	Longitud máxima permitida: 30 caracteres
+o	Campo obligatorio (required)
+
+•	Apellidos:
+o	Tipo de entrada: text
+o	Longitud máxima permitida: 50 caracteres
+o	Campo obligatorio (required)
+
+•	DNI:
+o	Tipo de entrada: text
+o	Longitud máxima permitida: 9 caracteres
+o	Formato obligatorio: 8 dígitos seguidos de una letra (Ejemplo: 12345678Z)
+o	Utiliza el atributo pattern con expresión regular para validarlo.
+o	Campo obligatorio (required)
+
+•	Fecha de nacimiento:
+o	Tipo de entrada: date
+o	Campo obligatorio (required)
+•  Botón de envío:
+
+•	Incluir un botón con la etiqueta Registrar Cliente.
