@@ -9,8 +9,9 @@
 	<script type="text/javascript">
 		//getElementById es una funci�n de document que permite llamar a un objeto concreto de la p�gina.
 		function getfocus() {
+			dato = document.getElementById('cajaTexto2').value ;
 			document.getElementById('cajaTexto').focus();
-			document.getElementById('cajaTexto').value = "Hola";
+			document.getElementById('cajaTexto').value = dato;
 		}
 	
 		function losefocus() {
