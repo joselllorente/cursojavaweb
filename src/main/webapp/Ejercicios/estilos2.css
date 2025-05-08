@@ -1,0 +1,124 @@
+/* Fondo de pantalla para el body */
+body {
+  background: url('../img/formulario.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Contenedor principal del formulario con fondo semi-transparente */
+.form-container {
+  background-color: rgba(255, 255, 255, 0.9);  /* Fondo blanco con opacidad */
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+}
+
+/* Título del formulario */
+h2, h1 {
+  color: #007BFF;
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Estilo de las etiquetas <label> */
+label {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+  display: block;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* Estilo de los campos de entrada */
+input[type="text"],
+input[type="date"],
+button {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+/* Cambio de borde cuando el campo tiene el foco */
+input[type="text"]:focus,
+input[type="date"]:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+/* Estilo de los campos de entrada con validación incorrecta */
+input[type="text"]:invalid {
+  border-color: red;
+}
+
+/* Estilo para los campos obligatorios */
+input[required] {
+  background-color: #f9f9f9;
+}
+
+/* Estilo para el botón de envío */
+button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 14px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Detalles adicionales, pequeños toques */
+input[type="text"]:focus,
+button:hover {
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.6);
+}
+
+/* Texto explicativo en pequeños */
+small {
+  font-size: 12px;
+  color: #888;
+  display: block;
+  margin-top: -10px;
+}
+
+/* Estilo para los márgenes entre los campos */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Animación en el formulario cuando aparece */
+@keyframes formAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.form-container {
+  animation: formAnimation 0.5s ease-out;
+}

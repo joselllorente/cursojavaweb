@@ -1,0 +1,66 @@
+@charset "UTF-8";
+/* General */
+body {
+    background-color: #1c1c1c;  /* Fondo oscuro */
+    color: #d1d1d1;  /* Texto claro */
+    font-family: Arial, sans-serif;
+}
+
+/* Establecer el modelo de caja para todos los elementos */
+* {
+    box-sizing: border-box;
+}
+
+/* Estilos para los formularios */
+form {
+    background-color: #2d2d2d;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    margin: 20px auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #d1d1d1;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea,
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    background-color: #444;
+    border: 1px solid #555;
+    color: #d1d1d1;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Estilo para los botones */
+button {
+    background-color: #0078d4;  /* Azul de Windows */
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #006bb3;  /* Azul más oscuro */
+}
+
+/* Estilos para el texto en error */
+.error {
+    color: #f00;  /* Color rojo para mensajes de error */
+    font-size: 12px;
+}
+
