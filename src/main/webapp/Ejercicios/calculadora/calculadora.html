@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<script type="text/javascript">
+		let oper = "";
+		let numero = 0;
+		function operar (operacion){
+			//alert("Operación: " +operacion)
+			console.log("Operación"+operacion)
+			oper = operacion;
+			
+			cajanumero = document.getElementById("numeroIntroducido");
+			
+			numero = cajanumero.value
+			console.log(numero)
+			cajanumero.value = ""
+			cajanumero.focus()
+		}
+		
+		function resultado (){
+			cajanumero = document.getElementById("numeroIntroducido")
+			alert("'"+cajanumero.value+"'")
+			if (cajanumero.value==""){
+				alert("Introduce un número")
+				cajanumero.focus()
+			}else{
+				cajaresultado = document.getElementById("numeroResultado");
+				
+				result = numero + oper + cajanumero.value
+				console.log(result)
+				cajaresultado.value = eval(result) 
+			}
+			
+			
+		}
+	</script>
+
+</head>
+<body>
+
+<h1>Calculadora</h1>
+
+	Número: <input id="numeroIntroducido" type="number" placeholder="Introduce un número" value="0"/>
+	<br>
+	<br>
+	Resultado: <input id="numeroResultado" type="number" readonly/>
+	<br><br>
+	<a href="#" onclick="operar('+')">
+		<img src="../../img/calculadora/botonSuma.png" width="50" height="50"></img>
+	</a>
+	<a href="#" onclick="operar('-')">
+		<img src="../../img/calculadora/botonRestaa.png" width="50" height="50"></img>
+	</a>
+	<a href="#" onclick="operar('*')">
+		<img src="../../img/calculadora/botonMultiplicacion.png" width="50" height="50"></img>
+	</a>
+	<a href="#" onclick="operar('/')">
+		<img src="../../img/calculadora/botonDivision.png" width="50" height="50"></img>
+	</a>
+	<br><br>
+	<a href="#" onclick="resultado()">
+		<img src="../../img/calculadora/botonCalcular.png" width="150" height="50"></img>
+	</a>
+
+
+
+</body>
+</html>
