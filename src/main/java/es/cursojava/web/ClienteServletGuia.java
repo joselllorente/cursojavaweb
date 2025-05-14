@@ -9,16 +9,16 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class ServletTest
+ * Servlet implementation class ClienteServletGuia
  */
-@WebServlet("/ServletTest")
-public class ServletTest extends HttpServlet {
+@WebServlet("/cliente2")
+public class ClienteServletGuia extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * Default constructor. 
      */
-    public ServletTest() {
+    public ClienteServletGuia() {
         // TODO Auto-generated constructor stub
     }
 
@@ -27,15 +27,7 @@ public class ServletTest extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String alumno = request.getParameter("alumno");
-		String mensaje = request.getParameter("mensaje");
-		if (alumno!=null && mensaje !=null ) {
-			System.out.println(request.getSession().getId() + " " +alumno + " " + mensaje);
-		}else {
-			System.out.println(request.getSession().getId());
-		}
-		
-		response.getWriter().append("<h1>Served at: ").append(request.getContextPath()).append("</h1>");
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
