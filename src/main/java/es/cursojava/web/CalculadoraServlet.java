@@ -24,23 +24,29 @@ public class CalculadoraServlet extends HttpServlet {
 		if (numero==null || numero2==null || operacion==null) {
 			resp.getWriter().append("<h1>Ha habido un error<h1>");
 		}else {
-			switch(operacion) {
-				case "suma": resp.getWriter().append("El resultado de la suma es "+(numero1+Integer.parseInt(numero2))); break;
-				case "resta": resp.getWriter().append("El resultado de la resta es "+(numero1-Integer.parseInt(numero2))); break;
-				case "multiplica": resp.getWriter().append("El resultado de la multiplicación es "+(numero1*Integer.parseInt(numero2))); break;
-				case "divide": resp.getWriter().append("El resultado de la división es "+(numero1/Integer.parseInt(numero2))); break;
-				default: resp.getWriter().append(operacion + "operacion no soportada"); break;
-			}
+//			switch(operacion) {
+//				case "suma": resp.getWriter().append("<h1>El resultado de la suma es "+(numero1+Integer.parseInt(numero2))); break;
+//				case "resta": resp.getWriter().append("El resultado de la resta es "+(numero1-Integer.parseInt(numero2))); break;
+//				case "multiplica": resp.getWriter().append("El resultado de la multiplicación es "+(numero1*Integer.parseInt(numero2))); break;
+//				case "divide": resp.getWriter().append("El resultado de la división es "+(numero1/Integer.parseInt(numero2))); break;
+//				default: resp.getWriter().append(operacion + "operacion no soportada"); break;
+//			}
 			
+			//resp.sendRedirect("calculadoraSevlet.html");
+			resp.sendRedirect("prueba.jsp?repeticiones="+numero1);
 //			resp.getWriter().append("El numero es "+numero);
 //			System.out.println(numero.toLowerCase());
 		}
 		
-		
-		
-		
-		
 	}
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(req, resp);
+	}
+	
+	
 	
 }
 
