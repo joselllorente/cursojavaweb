@@ -1,4 +1,4 @@
-package es.cursojava.web;
+package es.cursojava.web.servlets;
 
 import java.io.IOException;
 
