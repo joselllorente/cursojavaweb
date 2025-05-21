@@ -6,7 +6,7 @@
 
         <!-- Conexión JDBC -->
         <property name="hibernate.connection.driver_class">oracle.jdbc.OracleDriver</property>
-        <property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1522:XE</property>
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@10.2.1.25:1522:XE</property>
         <property name="hibernate.connection.username">getafesql</property>
         <property name="hibernate.connection.password">password</property>
 

@@ -1,6 +1,11 @@
 package es.cursojava.web.services;
 
+import java.util.List;
+
+import es.cursojava.web.dao.CalculadoraDAO;
+import es.cursojava.web.dao.CalculadoraDAOImpl;
 import es.cursojava.web.dto.CalculadoraDTO;
+import es.cursojava.web.entities.CalculadoraEntity;
 
 public class CalculadoraService {
 
@@ -19,8 +24,21 @@ public class CalculadoraService {
 		}
 		dto.setMensaje("El resultado de la operacion es: "+resultado);
 		dto.setResultado(resultado);
-		
-		//return dto;
+
 	}
 	
+	public void insertarOperacion(CalculadoraDTO dto) {
+		CalculadoraEntity entity = 
+				new CalculadoraEntity(dto.getNumero1(),dto.getNumero2(), dto.getResultado(), dto.getOperacion(), null);
+
+		CalculadoraDAO calcDao = new CalculadoraDAOImpl();
+		calcDao.insert(entity);
+		
+	}
+	
+	public List<CalculadoraEntity> consultar(){
+		CalculadoraDAO calcDao = new CalculadoraDAOImpl();
+		
+		return calcDao.findAll();
+	}
 }

@@ -24,6 +24,19 @@ public class CalculadoraEntity {
 		super();
 	}
 
+	
+	public CalculadoraEntity(int numero1, int numero2, int resultado, String operacion, Date fecha) {
+		super();
+		this.numero1 = numero1;
+		this.numero2 = numero2;
+		this.resultado = resultado;
+		this.operacion = operacion;
+		this.fecha = fecha;
+	}
+
+
+
+
 	public int getNumero1() {
 		return numero1;
 	}

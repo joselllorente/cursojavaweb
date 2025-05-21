@@ -34,5 +34,7 @@
 	<%
 	}
 	%>
+	
+	<a href="calculadora">Mostrar Operaciones</a>
 </body>
 </html>
